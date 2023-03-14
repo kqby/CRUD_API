@@ -23,7 +23,7 @@ const carSchema = new mongoose.Schema({
 
 const Car = mongoose.model('Car', carSchema);
 
-const validateBook = (car) => {
+const validateCar = (car) => {
     const schema = {
         licencePlateNumber: Joi.string().min(5).max(10).required(),
         ownersName: Joi.string().min(5).max(40).required(),
@@ -34,4 +34,4 @@ const validateBook = (car) => {
 }
 
 exports.Car = Car;
-exports.validate = validateBook;
+exports.validate = validateCar;
